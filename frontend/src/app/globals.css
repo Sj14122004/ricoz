@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-mist font-sans text-ink antialiased; }
+  h1, h2, h3 { @apply font-display tracking-tight text-night; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition
+           disabled:cursor-not-allowed disabled:opacity-50
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lamp focus-visible:ring-offset-2;
+  }
+  .btn-primary { @apply btn bg-night text-white hover:bg-night-700; }
+  .btn-lamp { @apply btn bg-lamp text-night hover:bg-lamp-deep; }
+  .btn-ghost { @apply btn border border-night-100 bg-white text-night hover:bg-mist; }
+  .btn-danger { @apply btn bg-danger/10 text-danger hover:bg-danger/20; }
+  .input {
+    @apply w-full rounded-xl border border-night-100 bg-white px-4 py-2.5 text-sm outline-none transition
+           placeholder:text-slate-400 focus:border-night-600 focus:ring-2 focus:ring-lamp/60;
+  }
+  .label { @apply mb-1.5 block text-sm font-medium text-night; }
+  .panel { @apply rounded-2xl bg-white p-5 shadow-lift ring-1 ring-night-100/60; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lamp-pulse { animation: pulse 5s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .75; transform: scale(1.04); } }
+}
