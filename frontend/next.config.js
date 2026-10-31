@@ -1,6 +1,6 @@
 /** @type {import("next").NextConfig} */
 module.exports = {
   async rewrites() {
-    return [{ source: '/api/:path*', destination: 'http://localhost:5000/api/:path*' }];
+    return [{ source: '/api/:path*', destination: `${process.env.BACKEND_URL}/api/:path*` }];
   },
 };
