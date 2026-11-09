@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body>
+      <body className="min-h-screen flex flex-col">
         <Providers>
           <Navbar />
-          {children}
+          <div className="flex-1">{children}</div>
           <Footer />
         </Providers>
       </body>

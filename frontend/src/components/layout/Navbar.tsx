@@ -29,7 +29,7 @@ export default function Navbar() {
         </Link>
         <div className="flex items-center gap-1">
           {link('/products', 'Supplies')}
-          {user && !isAdmin && link('/orders', 'My requests')}
+          {user && !isAdmin && link('/orders', 'My Orders')}
           {isAdmin && link('/admin', 'Admin')}
           {!isAdmin && (
             <Link href="/request" className="relative rounded-lg p-2 text-white/80 hover:bg-white/10" aria-label={`Request, ${count} items`}>
