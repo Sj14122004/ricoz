@@ -23,7 +23,7 @@ export default function Navbar() {
   );
 
   return (
-    <header className="sticky bg-[#FFF1D6]">
+    <header className="sticky bg-white">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-2 font-display text-lg font-bold text-white">
           <img src="/assets/icon.png" alt="Night Pod Logo" className="h-8 w-8" />
